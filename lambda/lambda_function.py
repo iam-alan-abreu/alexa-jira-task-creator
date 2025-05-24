@@ -1,6 +1,6 @@
 """
 Alexa Skill para criação de tasks no Jira Cloud
-Autor: [Seu Nome]
+Autor: Alan Abreu
 Versão: 1.0.0
 """
 
