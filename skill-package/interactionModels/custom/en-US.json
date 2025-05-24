@@ -1,0 +1,96 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "jira",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "SetupJiraIntent",
+          "slots": [],
+          "samples": [
+            "configurar jira",
+            "configurar minha conta",
+            "configurar conta do jira",
+            "setup jira",
+            "configuração inicial"
+          ]
+        },
+        {
+          "name": "CaptureSetupDataIntent",
+          "slots": [
+            {
+              "name": "setupData",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "{setupData}",
+            "é {setupData}",
+            "meu domínio é {setupData}",
+            "meu email é {setupData}",
+            "meu token é {setupData}",
+            "meu id é {setupData}"
+          ]
+        },
+        {
+          "name": "CreateTaskIntent",
+          "slots": [],
+          "samples": [
+            "criar uma task",
+            "criar nova task",
+            "nova task",
+            "criar tarefa",
+            "fazer uma task",
+            "adicionar task"
+          ]
+        },
+        {
+          "name": "CaptureTaskDataIntent",
+          "slots": [
+            {
+              "name": "data",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "{data}",
+            "é {data}",
+            "será {data}",
+            "o título é {data}",
+            "a descrição é {data}",
+            "no projeto {data}",
+            "projeto {data}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CreateTaskIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": []
+  }
+}

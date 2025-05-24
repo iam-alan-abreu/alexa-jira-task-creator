@@ -1,0 +1,66 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Crie tasks no Jira Cloud usando comandos de voz",
+          "examplePhrases": [
+            "Alexa, abrir Jira",
+            "Alexa, pedir para Jira criar uma task",
+            "Alexa, dizer para Jira configurar Jira"
+          ],
+          "keywords": [
+            "jira",
+            "tasks",
+            "produtividade",
+            "trabalho",
+            "projeto"
+          ],
+          "name": "Jira Task Creator",
+          "description": "Skill para criar tasks no Jira Cloud através de comandos de voz. Configure sua conta do Jira uma vez e depois crie tasks facilmente dizendo o título, descrição e projeto.",
+          "largeIconUri": "file://assets/images/en-US_largeIcon.png",
+          "smallIconUri": "file://assets/images/en-US_smallIcon.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "distributionCountries": ["BR", "US"],
+      "distributionMode": "PUBLIC",
+      "category": "PRODUCTIVITY",
+      "testingInstructions": "Para testar: 1) Diga 'configurar Jira' e forneça suas credenciais, 2) Diga 'criar uma task' e siga as instruções."
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:YOUR_ACCOUNT_ID:function:ask-JiraTaskCreator-default-skillStack-AlexaSkillFunction"
+        },
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:YOUR_ACCOUNT_ID:function:ask-JiraTaskCreator-default-skillStack-AlexaSkillFunction"
+            }
+          }
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::devices::all:notifications:write"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://your-domain.com/privacy-policy",
+          "termsOfUseUrl": "https://your-domain.com/terms-of-use"
+        }
+      }
+    }
+  }
+}
